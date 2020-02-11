@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                sayHello 'Dave'
+                sayHello name: 'hello'
                 sh 'echo "Hello World"'
                 sh '''
                     echo "Multiline shell steps works too"
