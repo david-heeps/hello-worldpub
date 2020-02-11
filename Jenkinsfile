@@ -1,6 +1,4 @@
-libraries {
-  lib('pipeline-library-demo')
-}
+@Library('my-shared-library') _
 
 pipeline {
     agent any
