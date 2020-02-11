@@ -1,8 +1,13 @@
+libraries {
+  lib('pipeline-library-demo')
+}
+
 pipeline {
     agent any
     stages {
         stage('Example') {
             steps {
+                sayHello 'Dave'
                 sh 'echo "Hello World"'
                 sh '''
                     echo "Multiline shell steps works too"
