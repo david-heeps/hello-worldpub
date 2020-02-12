@@ -13,6 +13,7 @@ pipeline {
         stage('Example') {
             steps {
                 sh 'echo "Hello World"'
+                sh 'echo "Hello World again!!!"'
                 sh '''
                     echo "Multiline shell steps works too"
                     ls -lah
