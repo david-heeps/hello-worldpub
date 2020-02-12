@@ -10,6 +10,7 @@ pipeline {
     agent any
     stages {
         stage('Checkout') {
+            steps {
             git(
                 poll: true
                     url: 'https://github.com/david-heeps/hello-worldpub',
@@ -21,6 +22,7 @@ pipeline {
                     branch: 'master'
                 )
         }
+    }
         
         stage('Example') {
             steps {
