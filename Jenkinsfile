@@ -1,24 +1,13 @@
 
-
-properties([
-    pipelineTriggers([
-        [$class: "SCMTrigger", scmpoll_spec: "* * * * *"],
-        ])
-    ])
-
 pipeline {
     agent any
     stages {
        
-        stage('Example') {
+        stage('Git') {
             steps {
-                sh 'echo "Hello World"'
-                sh 'echo "Hello World again710!!!"'
-                sh '''
-                    echo "Multiline shell steps works too"
-                    ls -lah
-                '''
-            }
-        }
-    }
-}
+git url: "git@github.com:david-heeps/hello-worldpub.git",
+    branch: test
+                }
+              }
+             }
+           }
