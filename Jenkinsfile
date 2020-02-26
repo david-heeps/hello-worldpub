@@ -6,5 +6,11 @@ pipeline {
                 sh 'echo "Success!"'
             }
         }
+        stage('Merging') {
+            steps {
+                sh 'echo "Merging test to Master!"'
+                sh 'git merge test'
+            }
+        }
     }
 }
