@@ -9,6 +9,7 @@ pipeline {
         stage('Merging') {
             steps {
                 sh 'echo "Merging test to Master!"'
+                sh 'git fetch master'
                 sh 'git checkout master'
                 sh 'git merge test'
             }
