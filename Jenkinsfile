@@ -9,10 +9,10 @@ pipeline {
         stage('Merging') {
             steps {
                 sh 'echo "Merging test to Master!"'
-                sh 'git add -A'
-                sh 'git commit -m "Merged test branch to master'
-                sh 'git merge origin/test'
-                sh 'git push origin HEAD:master'
+              // sh 'git add -A'
+              //  sh 'git commit -m "Merged test branch to master'
+              //  sh 'git merge origin/test'
+              //  sh 'git push origin HEAD:master'
             }
         }
     }
