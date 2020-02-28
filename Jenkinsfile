@@ -11,7 +11,9 @@ pipeline {
       //          sh 'echo "Merging test to Master!"'
     stage('CheckoutTest') {
         steps {
+            dir('../master') {
             git branch: 'master', url: 'ssh://git@github.com:david-heeps/hello-worldpub.git'
+                    }
         }
     }
          //   }
