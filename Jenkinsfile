@@ -12,6 +12,16 @@ pipeline {
                 '''
             }
         }
+             stage('Copy Archive') {
+                  steps {
+                     script {
+                 step ([$class: 'CopyArtifact',
+                 projectName: 'Job2',
+                 filter: "bin/**/*.*",
+                 target: 'artifacts']);
+             }
+         }
+     }
      }
         post {
         always {
