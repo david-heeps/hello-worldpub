@@ -18,7 +18,7 @@ pipeline {
                  step ([$class: 'CopyArtifact',
                  projectName: 'Job2',
                  filter: "bin/**/*.*",
-                 target: '../artifacts']);
+                 target: '../artifacts/Job2']);
              }
          }
      }
