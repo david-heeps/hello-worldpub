@@ -1,11 +1,3 @@
-
-
-properties([
-    pipelineTriggers([
-        [$class: "SCMTrigger", scmpoll_spec: "* * * * *"],
-        ])
-    ])
-
 pipeline {
     agent any
     stages {
