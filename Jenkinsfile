@@ -12,5 +12,10 @@ pipeline {
                 '''
             }
         }
+     }
+        post {
+        always {
+            archiveArtifacts artifacts: 'bin/**/*.*', fingerprint: true
+        }
     }
 }
